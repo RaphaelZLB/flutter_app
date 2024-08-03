@@ -91,7 +91,8 @@ class Registration extends GetView<RegistrationController> {
                       maxLines: 1,
                     ),
                     SizedBox(height: 200),
-                    //ElevatedButton(onPressed: () {}, child: Text('register')),
+                    //
+                    // ElevatedButton(onPressed: () {}, child: Text('register')),
                   ],
                 ),
               ),
