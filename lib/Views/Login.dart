@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:get/get.dart';
 import '../Controllers/LoginController.dart';
 
 class Login extends GetView<LoginController> {
@@ -15,9 +15,7 @@ class Login extends GetView<LoginController> {
                 Center(child:
                 Text('LogIn Page', style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold),),
                 ),],)  ),
-
-        body: Expanded(
-          child: SingleChildScrollView(
+        body:SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: const Center(
@@ -34,9 +32,10 @@ class Login extends GetView<LoginController> {
                           hintText: 'Your email...',
                           hintStyle: TextStyle(fontSize: 15,fontWeight: FontWeight.w300)
                       ),
-
+                      // controller: controller.email,
                       keyboardType: TextInputType.emailAddress,
                       maxLines: 1,
+
                     ),
 
                     SizedBox(height: 30),
@@ -50,6 +49,7 @@ class Login extends GetView<LoginController> {
                           hintText: 'Your password...',
                           hintStyle: TextStyle(fontSize: 15,fontWeight: FontWeight.w300)
                       ),
+
                       keyboardType: TextInputType.text,
                       obscureText:  true,
                       maxLines: 1,
@@ -63,7 +63,6 @@ class Login extends GetView<LoginController> {
               ),
             ),
           ),
-        )
     );
   }
 }
